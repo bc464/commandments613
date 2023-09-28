@@ -56,7 +56,7 @@ links.addEventListener("click", function commandChosen(e) {
         if (clickedCommand === data[i].title) {
           content.innerHTML = "";
           content.innerHTML = `
-        <a href="index.html" class="arrowBack">&larr;</a>
+        <a href="positiveInfoPage.html" class="arrowBack">&larr;</a>
         <div class="title-commandment">
         <h2>${data[i].title}</h2>
         </div>
