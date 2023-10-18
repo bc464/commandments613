@@ -1,21 +1,21 @@
-let content = document.getElementById("posData");
+let content = document.getElementById("negData");
 let searchInput = document.querySelector(".search-input");
 
 // fetching json-positiveMain
-fetch("./data/positiveMain.json")
+fetch("./data/negativeMain.json")
   .then(function (response) {
     return response.json();
   })
   .then(function (data) {
-    positiveMain(data);
+    negativeMain(data);
   })
   .catch(function (err) {
     console.log("error: " + err);
   });
 
 // Function to display json-positiveMain
-function positiveMain() {
-  let mainContainer = document.getElementById("posData");
+function negativeMain() {
+  let mainContainer = document.getElementById("negData");
   let div2 = document.createElement("div");
   div2.classList.add("linkBack");
   div2.innerHTML = `
@@ -25,7 +25,7 @@ function positiveMain() {
 `;
   content.append(div2);
 
-  fetch("./data/positiveMain.json")
+  fetch("./data/negativeMain.json")
     .then((response) => response.json())
     .then((data) => {
       for (let i = 0; i < data.length; i++) {
@@ -42,12 +42,12 @@ function positiveMain() {
       }
     });
 }
-// positiveMain();
+// negativeMain();
 // function when user clicks on a specific command
-let links = document.getElementById("posData");
+let links = document.getElementById("negData");
 links.addEventListener("click", function commandChosen(e) {
   let clickedCommand = e.target.outerText;
-  fetch("./data/positiveMain.json")
+  fetch("./data/negativeMain.json")
     .then(function (response) {
       return response.json();
     })
@@ -56,7 +56,7 @@ links.addEventListener("click", function commandChosen(e) {
         if (clickedCommand === data[i].title) {
           content.innerHTML = "";
           content.innerHTML = `
-        <a href="positiveInfoPage.html" class="arrowBack">&larr;</a>
+        <a href="negativeInfoPage.html" class="arrowBack">&larr;</a>
         <div class="title-commandment">
         <h2>${data[i].title}</h2>
         </div>
