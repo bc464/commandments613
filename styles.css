@@ -19,6 +19,23 @@ body {
   justify-content: center;
   column-gap: 20px;
 }
+.search-box {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+.search-input {
+  padding: 10px 10px;
+  border-radius: 100px;
+  border: white;
+  font-size: 18px;
+  width: 300px;
+  outline: none;
+  cursor: pointer;
+}
+input[type="text"]:focus {
+  border: white;
+}
 h1 {
   margin-bottom: 50px;
   text-align: center;
